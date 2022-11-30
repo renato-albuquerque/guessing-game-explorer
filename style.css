@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%); 
+    font-size: 1.6rem;
+
+    /* Another way to center items.  */
+    display: grid; 
+    place-items: center;
+    height: 100vh;
+}
+
+body, button, input {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    padding: 4.8rem 6.4rem 6.4rem;
+    background: #FFFFFF;
+    box-shadow: 0px 0.2px 0.4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.66px;
+    width: min(42.8rem, 90%);
+    /* margin: 0 auto; */
+    
+    text-align: center;
+}
+
+/* screen1 */
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+}
+
+h1, p {
+    color: #34355B;
+}
+
+p {
+    margin-top: 1.6rem;
+    margin-bottom: 4.8rem;
+    opacity: 0.8;
+}
+
+form {
+    display: flex;
+    justify-content: center; /* To center the input and button. */
+}
+
+input, button {
+    border: none;
+    padding: 1.6rem;
+}
+
+input {
+    background: #DCE2E9;
+    color: #34355B;
+    font-size: 1.6rem;
+    border-radius: 0.4px 0px 0px 0.4px;
+    width: 8rem; /* Adapted. Figma: 4.3rem */
+    height: 5.3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    background: #7879F1;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    border-radius: 0px 0.4px 0.4px 0px;
+    width: 6.0rem; /* Adapted. Figma: 8.2rem */
+    height: 5.3rem;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+button:hover {
+    background: #5555b3;
+}
+
+/* screen2 */
+
+h2 {
+    font-family: 'DM Sans';
+    font-weight: normal;
+    font-size: 1.95rem; /* Adapted. Figma: 2.4rem */
+    color: #34355B;
+    margin-bottom: 3.3rem;
+}
+
+.screen2 button {
+    border-radius: 0.4rem;
+    background: linear-gradient(107.56deg, #00DDFB 0%, #00709F 100%);
+    width: 14rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.screen2 button:hover {
+    background: linear-gradient(107.56deg, #00DDFB 0%, #052e3f 100%);
+}
