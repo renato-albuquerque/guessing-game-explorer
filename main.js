@@ -32,17 +32,21 @@ let xAttempts = 1
 // Events
 btnTry.addEventListener("click", handleTryClick)
 btnReset.addEventListener("click", handleResetClick)
-document.addEventListener("keydown", function(e) {
-    if(e.key == "Enter" && screen1.classList.contains("hide")) {
-        handleResetClick()
-    }
-})
+document.addEventListener("keydown", clickEnter)
 
 // Callback Function
 function handleTryClick(event) {
     event.preventDefault() /* This command means: Do not default this Event. The default for a button inside the form is: submit the form (submit, send). */ 
 
     const inputNumber = document.querySelector("#inputNumber")
+
+    if (Number(inputNumber.value) < 0 || Number(inputNumber.value) > 10) {
+        alert("Please, insert a number between 0 and 10.")
+        }
+
+    /* if (Number(inputNumber.value) < 0 || Number(inputNumber.value) > 10 || (!Number(inputNumber.value) && Number(inputNumber.value)!=0)) {
+        alert("Please, insert a number between 0 and 10.")
+        } */
 
     if(Number(inputNumber.value) == randomNumber) {
         toggleScreen()
@@ -66,6 +70,10 @@ function toggleScreen() {
     screen2.classList.toggle("hide")
 }
 
-
+function clickEnter(e) {
+    if(e.key == "Enter" && screen1.classList.contains("hide")) {
+        handleResetClick()
+    }
+}
 
 
